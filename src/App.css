@@ -1,4 +1,9 @@
 :root { --ink:#292416; --cream:#fff9e8; --yellow:#f7c943; --gold:#e5a90e; --orange:#ed8c38; --serif:'Fraunces', Georgia, serif; --mono:'DM Mono', monospace; }
+.falling-daisies { position:fixed; inset:0; z-index:10; pointer-events:none; overflow:hidden; }
+.falling-daisy { position:absolute; top:-72px; left:var(--left); opacity:.72; transform:scale(var(--size)); animation:falling-daisy var(--duration) linear var(--delay) infinite; }
+.falling-daisy .flower { filter:drop-shadow(0 4px 5px rgba(116,82,15,.08)); }
+@keyframes falling-daisy { 0% { transform:translate3d(0,-80px,0) rotate(0deg) scale(var(--size)); } 35% { margin-left:var(--drift); } 65% { margin-left:calc(var(--drift) * -1); } 100% { transform:translate3d(0,calc(100vh + 120px),0) rotate(330deg) scale(var(--size)); } }
+@media (prefers-reduced-motion: reduce) { .falling-daisies { display:none; } html { scroll-behavior:auto; } }
 .shell { width:min(1180px, calc(100% - 80px)); margin:0 auto; }
 .nav { height:96px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(41,36,22,.14); }
 .brand { display:flex; align-items:center; gap:10px; font-weight:600; font-size:17px; letter-spacing:-.03em; }.brand em { font-family:var(--serif); font-weight:500; font-size:20px; }.brand-mark { width:27px; height:27px; display:grid; place-items:center; background:var(--yellow); border-radius:50%; }.brand-mark .flower { transform:scale(.36); }
@@ -11,3 +16,14 @@
 .footer{border-top:1px solid rgba(41,36,22,.14);height:110px;display:flex;align-items:center;justify-content:space-between}.footer p{font:10px var(--mono);color:#998e70}.footer-sparkle{color:var(--orange);font-size:25px}
 @media (max-width:900px){.shell{width:min(100% - 40px,680px)}.hero{grid-template-columns:1fr;padding-top:65px}.hero-art{width:100%;margin:40px auto 0;max-width:600px}.hero-copy{order:0}.section-heading{align-items:start;flex-direction:column;gap:30px}.section-heading>p{max-width:410px}.favorites{padding:90px 0}.memory-grid{grid-template-columns:1fr 1fr}.memory-card:last-child{grid-column:span 2}.note-section{grid-template-columns:1fr}.note-side{min-height:280px}.nav-links{display:none}}
 @media (max-width:560px){.shell{width:calc(100% - 32px)}.nav{height:76px}.nav-pill{padding:9px 12px;font-size:10px}.hero{padding:50px 0 30px;min-height:auto}h1{font-size:56px}.hero-intro{font-size:14px}.hero-actions{gap:17px;flex-wrap:wrap}.hero-signoff{margin-top:42px}.hero-art{height:410px;margin-top:35px;transform:scale(.83);transform-origin:top center;margin-bottom:-65px}.sun-disc{width:300px;height:300px;left:63px}.photo-main{left:130px;width:232px;height:305px}.photo-dog{left:10px;top:250px;width:140px;height:152px}.photo-coffee{right:4px;top:280px;width:142px;height:140px}.daisy-one{left:40px}.daisy-two{right:-20px}.art-note{right:0}.marquee div{justify-content:start}.favorites{padding:80px 0}.memory-grid{grid-template-columns:1fr;gap:16px}.memory-card:last-child{grid-column:auto}.memory-image{height:300px}.note-section{width:100%;margin-bottom:70px}.note-card{padding:58px 24px 65px}.note-side{padding:55px 24px;min-height:290px}.footer{height:100px;gap:15px}.footer p{font-size:8px}.footer-sparkle{display:none}}
+
+/* Birthday atmosphere and note reveal polish */
+:root { --cream:#fff4d1; }
+.falling-daisy .flower { filter:drop-shadow(0 3px 5px rgba(116,82,15,.22)); }
+.falling-daisy .flower i { border:1px solid rgba(208,157,35,.35); }
+.note-card-open .note-flower { animation:note-flower-pop .8s cubic-bezier(.2,.9,.25,1.25) both; }
+.revealed-note { transform-origin:top left; animation:note-reveal .7s cubic-bezier(.2,.85,.25,1.2) both; }
+.revealed-note strong { animation:note-signoff .5s .35s ease both; }
+@keyframes note-reveal { 0% { opacity:0; transform:translateY(20px) scale(.94) rotateX(-12deg); filter:blur(4px); } 65% { opacity:1; transform:translateY(-4px) scale(1.01) rotateX(2deg); filter:blur(0); } 100% { opacity:1; transform:none; } }
+@keyframes note-signoff { 0% { opacity:0; transform:translateY(7px); } 100% { opacity:1; transform:none; } }
+@keyframes note-flower-pop { 0% { transform:scale(2.7) rotate(15deg); } 45% { transform:scale(3) rotate(-4deg); } 100% { transform:scale(2.7) rotate(15deg); } }
