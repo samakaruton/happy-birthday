@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
 
-const message = 'HAPPY BIRTHDAY'
+const message = 'HAPPY BIRTHDAY MRS. GRATTON'
 
 export function BirthdayGreeting() {
   const [visible, setVisible] = useState(true)

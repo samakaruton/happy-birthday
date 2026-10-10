@@ -32,7 +32,7 @@ export function NoteSection() {
               beginnings, belly laughs, and every good thing you’ve been quietly
               wishing for.
             </p>
-            <strong>Happy birthday, beautiful. ♡</strong>
+            <strong>Happy birthday, Mrs. Gratton. ♡</strong>
           </div>
         )}
       </div>
