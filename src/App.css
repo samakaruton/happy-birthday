@@ -1,5 +1,15 @@
 :root { --ink:#292416; --cream:#fff9e8; --yellow:#f7c943; --gold:#e5a90e; --orange:#ed8c38; --serif:'Fraunces', Georgia, serif; --mono:'DM Mono', monospace; }
 html, body, #root { max-width:100%; overflow-x:hidden; }
+.birthday-greeting { position:fixed; inset:0; z-index:20; display:grid; place-content:center; justify-items:center; pointer-events:none; color:var(--ink); background:rgba(255,244,209,.86); animation:greeting-lifecycle 5s ease forwards; backdrop-filter:blur(2px); }
+.greeting-kicker { margin:0 0 18px; color:#9c7623; font:10px var(--mono); letter-spacing:.2em; text-transform:uppercase; animation:greeting-item .8s ease both; }
+.birthday-greeting h2 { display:flex; align-items:center; margin:0; color:var(--orange); font:500 clamp(42px,8vw,108px)/.9 var(--serif); letter-spacing:-.075em; }
+.birthday-greeting h2 > span:not(.greeting-space) { display:inline-block; opacity:0; animation:greeting-letter .75s cubic-bezier(.2,.8,.25,1) var(--letter-delay) both; }
+.greeting-space { width:.28em; }
+.greeting-sparkle { position:absolute; margin-left:clamp(270px,45vw,560px); margin-top:-150px; color:var(--gold); font-size:28px; animation:greeting-sparkle 1s .7s ease both; }
+@keyframes greeting-lifecycle { 0%, 10% { opacity:0; } 20%, 78% { opacity:1; } 100% { opacity:0; visibility:hidden; } }
+@keyframes greeting-item { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+@keyframes greeting-letter { from { opacity:0; transform:translateY(32px) rotate(7deg) scale(.8); } to { opacity:1; transform:none; } }
+@keyframes greeting-sparkle { from { opacity:0; transform:scale(.3) rotate(-30deg); } to { opacity:1; transform:scale(1) rotate(0); } }
 @media (max-width:1100px) and (min-width:901px){main .shell{width:calc(100% - 48px)}main .hero{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:12px}main .hero-copy,main .hero-art{min-width:0}main .hero-art{width:calc(100% + 45px);margin-left:-45px;transform:scale(.84);transform-origin:center right}main h1{font-size:clamp(52px,6vw,76px)}}
 .falling-daisies { position:fixed; inset:0; z-index:10; pointer-events:none; overflow:hidden; }
 .falling-daisy { position:absolute; top:-72px; left:var(--left); opacity:.72; transform:scale(var(--size)); animation:falling-daisy var(--duration) linear var(--delay) infinite; }

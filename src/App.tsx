@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { BirthdayCard } from './components/BirthdayCard'
+import { BirthdayGreeting } from './components/BirthdayGreeting'
 import { FallingDaisies } from './components/FallingDaisies'
 import { Favorites } from './components/Favorites'
 import { Footer } from './components/Footer'
@@ -21,6 +22,7 @@ function App() {
   return (
     <main>
       {!hasOpenedCard && <BirthdayCard isOpening={isCardOpening} onOpen={openCard} />}
+      {hasOpenedCard && <BirthdayGreeting />}
       <FallingDaisies />
       <Navbar />
       <Hero />
