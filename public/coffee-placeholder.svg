@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" role="img" aria-labelledby="title desc">
+  <title id="title">Coffee on a sunny table</title>
+  <desc id="desc">A warm illustrated coffee cup with a daisy on a sunny yellow table.</desc>
+  <rect width="700" height="700" fill="#f4d36d"/>
+  <circle cx="548" cy="120" r="92" fill="#f7c943" opacity=".9"/>
+  <path d="M0 470c150-74 274-62 390 0s210 68 310-5v235H0Z" fill="#e7ac4f" opacity=".75"/>
+  <ellipse cx="340" cy="514" rx="180" ry="44" fill="#8a572f" opacity=".28"/>
+  <path d="M190 320h300l-28 190c-5 31-32 53-64 53H282c-32 0-59-22-64-53Z" fill="#fff8dc" stroke="#292416" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M490 365h40c61 0 94 42 82 86-10 38-44 58-96 50" fill="none" stroke="#292416" stroke-width="12" stroke-linecap="round"/>
+  <ellipse cx="340" cy="320" rx="150" ry="37" fill="#fff8dc" stroke="#292416" stroke-width="12"/>
+  <ellipse cx="340" cy="320" rx="119" ry="23" fill="#7a482a"/>
+  <path d="M285 242c-22-45 22-58-2-103m65 103c-22-45 22-58-2-103m66 103c-22-45 22-58-2-103" fill="none" stroke="#fff8dc" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+  <g transform="translate(88 90)">
+    <path d="M30 46 53 98" stroke="#5f9b58" stroke-width="7" stroke-linecap="round"/>
+    <path d="M52 75c-26-22-43-5-43 14 22 3 37-2 43-14Zm3 8c24-22 41-6 41 13-20 5-35 1-41-13Z" fill="#6eaa63"/>
+    <circle cx="29" cy="29" r="18" fill="#e5a90e"/>
+    <g fill="#fffdf2" stroke="#d09d23" stroke-width="2"><ellipse cx="29" cy="6" rx="9" ry="19"/><ellipse cx="29" cy="52" rx="9" ry="19"/><ellipse cx="6" cy="29" rx="19" ry="9"/><ellipse cx="52" cy="29" rx="19" ry="9"/></g>
+  </g>
+</svg>

@@ -1,5 +1,6 @@
 :root { --ink:#292416; --cream:#fff9e8; --yellow:#f7c943; --gold:#e5a90e; --orange:#ed8c38; --serif:'Fraunces', Georgia, serif; --mono:'DM Mono', monospace; }
 html, body, #root { max-width:100%; overflow-x:hidden; }
+.memory-woman .memory-image img { object-fit:contain; object-position:center; background:#f0cfb0; }
 .birthday-greeting { position:fixed; inset:0; z-index:20; display:grid; place-content:center; justify-items:center; pointer-events:none; color:var(--ink); background:rgba(255,244,209,.86); animation:greeting-lifecycle 5s ease forwards; backdrop-filter:blur(2px); }
 .greeting-kicker { margin:0 0 18px; color:#9c7623; font:10px var(--mono); letter-spacing:.2em; text-transform:uppercase; animation:greeting-item .8s ease both; }
 .birthday-greeting h2 { display:flex; align-items:center; margin:0; color:var(--orange); font:500 clamp(42px,8vw,108px)/.9 var(--serif); letter-spacing:-.075em; }
