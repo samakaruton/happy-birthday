@@ -1,5 +1,6 @@
 import { Flower } from './Flower'
 import hazel from '../assets/hazel1.jpeg'
+import image1 from '../assets/image1.jpeg'
 
 export function Hero() {
   return <section className="hero shell" id="top">
@@ -32,7 +33,7 @@ export function Hero() {
         <img src={hazel} alt="Small fluffy dog" />
       </div>
       <div className="photo photo-coffee">
-        <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=700&q=85" alt="Coffee on a sunny table" />
+        <img src={image1} alt="Coffee on a sunny table" />
       </div>
       <div className="daisy daisy-one"><Flower /></div>
       <div className="daisy daisy-two"><Flower /></div>
